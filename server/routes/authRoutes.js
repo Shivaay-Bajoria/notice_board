@@ -35,4 +35,13 @@ router.post('/login', async (req, res) => {
     }
 });
 
+router.get('/faculty', async (req, res) => {
+    try {
+        const faculty = await User.find({ role: 'faculty' }).select('-password');
+        res.json(faculty);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 module.exports = router;
