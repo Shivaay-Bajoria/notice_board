@@ -18,7 +18,7 @@ function Exams({ user }) {
 
     const fetchExams = async () => {
         try {
-            const res = await axios.get('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/exams', config);
+            const res = await axios.get('https://notice-board-gtem.onrender.com/api/exams', config);
             setExams(res.data);
         } catch (err) {
             console.error(err);
@@ -28,7 +28,7 @@ function Exams({ user }) {
     const handleAddExam = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/exams', { courseCode, title, date, type }, config);
+            await axios.post('https://notice-board-gtem.onrender.com/api/exams', { courseCode, title, date, type }, config);
             setCourseCode(''); setTitle(''); setDate(''); fetchExams();
         } catch (err) {
             console.error(err);
@@ -37,7 +37,7 @@ function Exams({ user }) {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/exams/${id}`, config);
+            await axios.delete(`https://notice-board-gtem.onrender.com/api/exams/${id}`, config);
             fetchExams();
         } catch (err) {
             console.error(err);

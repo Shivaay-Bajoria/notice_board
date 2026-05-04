@@ -21,7 +21,7 @@ function Dashboard({ user, setUser }) {
 
     const fetchNotices = async () => {
         try {
-            const res = await axios.get('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/notices', config);
+            const res = await axios.get('https://notice-board-gtem.onrender.com/api/notices', config);
             setNotices(res.data);
         } catch (err) {
             console.error(err);
@@ -31,7 +31,7 @@ function Dashboard({ user, setUser }) {
     const handleCreateNotice = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/notices', { title, description, category, isPinned }, config);
+            await axios.post('https://notice-board-gtem.onrender.com/api/notices', { title, description, category, isPinned }, config);
             setTitle(''); setDescription(''); setCategory('General'); setIsPinned(false);
             fetchNotices(); 
         } catch (err) {
@@ -41,7 +41,7 @@ function Dashboard({ user, setUser }) {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/notices/${id}`, config);
+            await axios.delete(`https://notice-board-gtem.onrender.com/api/notices/${id}`, config);
             fetchNotices(); 
         } catch (err) {
             console.error(err);
@@ -50,7 +50,7 @@ function Dashboard({ user, setUser }) {
 
     const handleLike = async (id) => {
         try {
-            await axios.put(`[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/notices/${id}/like`, {}, config);
+            await axios.put(`https://notice-board-gtem.onrender.com/api/notices/${id}/like`, {}, config);
             fetchNotices(); 
         } catch (err) {
             console.error(err);

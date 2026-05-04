@@ -16,7 +16,7 @@ function Signup() {
         setMessage(''); setError('');
         
         try {
-            await axios.post('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/auth/register', { name, email, password, role });
+            await axios.post('https://notice-board-gtem.onrender.com/api/auth/register', { name, email, password, role });
             setMessage('Account created! Redirecting to login...');
             setTimeout(() => navigate('/'), 2000);
         } catch (err) {
