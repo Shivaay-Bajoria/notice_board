@@ -29,7 +29,7 @@ function Signup() {
             <div className="auth-glass-card">
                 <div className="auth-header">
                     <h2>Create Account</h2>
-                    <p>Register for the CampusBoard portal</p>
+                    <p>Register for the Velox OMS portal</p>
                 </div>
 
                 {message && <div style={{ background: 'rgba(16, 185, 129, 0.2)', border: '1px solid #10b981', color: '#6ee7b7', padding: '10px', borderRadius: '8px', marginBottom: '20px', textAlign: 'center', fontSize: '14px' }}>{message}</div>}

@@ -25,7 +25,7 @@ function Login({ setUser }) {
         <div className="auth-wrapper">
             <div className="auth-glass-card">
                 <div className="auth-header">
-                    <h2>CampusBoard</h2>
+                    <h2>Velox OMS</h2>
                     <p>Enter your credentials to access the portal</p>
                 </div>
 

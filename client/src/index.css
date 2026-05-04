@@ -509,6 +509,8 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   border-color: #6366f1;
   outline: none;
+  background-color: #0f172a !important; /* Forces background to stay dark */
+  color: #f8fafc !important; /* Forces text to stay white */
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
@@ -655,4 +657,14 @@ button:hover {
   display: flex; 
   gap: 15px; /* Slightly tightened spacing */
   align-items: center;
+}
+
+/* Overrides Webkit/Chrome Autofill white background bug */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0f172a inset !important;
+    -webkit-text-fill-color: #f8fafc !important;
+    transition: background-color 5000s ease-in-out 0s;
 }

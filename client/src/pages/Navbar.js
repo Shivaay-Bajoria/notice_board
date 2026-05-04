@@ -14,7 +14,7 @@ function Navbar({ user, setUser }) {
 
     return (
         <nav className="navbar">
-            <h3 style={{ color: 'white', margin: 0 }}>CampusBoard</h3>
+            <h3 style={{ color: 'white', margin: 0 }}>Velox OMS</h3>
             <div className="nav-links">
                 <Link to="/Dashboard">Notice Feed</Link>
                 <Link to="/Exam">Exam Calendar</Link>
