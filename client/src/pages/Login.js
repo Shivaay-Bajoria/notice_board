@@ -11,7 +11,7 @@ function Login({ setUser }) {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:3050/api/auth/login', { email, password });
+            const res = await axios.post('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/auth/login', { email, password });
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('user', JSON.stringify(res.data.user));
             setUser(res.data.user);

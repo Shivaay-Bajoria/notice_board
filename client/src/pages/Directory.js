@@ -7,7 +7,7 @@ function Directory() {
     useEffect(() => {
         const fetchFaculty = async () => {
             try {
-                const res = await axios.get('http://localhost:3050/api/auth/faculty');
+                const res = await axios.get('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/auth/faculty');
                 setFaculty(res.data);
             } catch (err) {
                 console.error("Error fetching directory", err);

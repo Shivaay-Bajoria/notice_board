@@ -17,7 +17,7 @@ function Resources({ user }) {
 
     const fetchResources = async () => {
         try {
-            const res = await axios.get('http://localhost:3050/api/resources', config);
+            const res = await axios.get('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/resources', config);
             setResources(res.data);
         } catch (err) {
             console.error(err);
@@ -27,7 +27,7 @@ function Resources({ user }) {
     const handleAddResource = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3050/api/resources', { courseCode, title, link }, config);
+            await axios.post('[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/resources', { courseCode, title, link }, config);
             setCourseCode(''); setTitle(''); setLink(''); fetchResources();
         } catch (err) {
             console.error(err);
@@ -36,7 +36,7 @@ function Resources({ user }) {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3050/api/resources/${id}`, config);
+            await axios.delete(`[https://notice-board-gtem.onrender.com](https://notice-board-gtem.onrender.com)/api/resources/${id}`, config);
             fetchResources();
         } catch (err) {
             console.error(err);
